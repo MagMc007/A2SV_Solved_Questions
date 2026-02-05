@@ -37,8 +37,7 @@ class Solution:
             if not comment_flag and currentStrip:
                 # no opened and current strip is not empty
                 code.append(currentStrip)
-               
-        
+        return code
                     
 
 
