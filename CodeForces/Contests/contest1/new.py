@@ -7,6 +7,3 @@ for _ in range(t):
         print(0)
     elif "2025" in year:
         print(1)
-
-
-    
