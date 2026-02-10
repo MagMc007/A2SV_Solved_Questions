@@ -15,3 +15,17 @@ conditions to stay in the river infinitely
     * - max of the left and the right
 """
 
+if "**" in current or "*<" in current or ">*" in current or "><" in current:
+    print(-1)
+else:
+    ans = 0
+    i = 0
+    while i < len(current) - 1:
+        if not current[i] == current[i + 1]:
+            if current[i + 1] == "*":
+                ans = max(i + 1, len(current) - i - 1) + 1
+            else:
+                ans = max(i + 1, len(current) - i - 1)
+        i += 1
+        
+    print(ans)
