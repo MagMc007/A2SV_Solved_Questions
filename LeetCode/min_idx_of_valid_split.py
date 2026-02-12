@@ -18,14 +18,16 @@ class Solution:
         # we have a left and right array
         # for each splt we have keep count of the dominant and 
         # the other number in the list
-        if nums[0] == dominant[0]:
-            left_dominant = 1
-            left_others = 0
-        else:
-            left_dominant = 0
-            left_others = 1
+        # if nums[0] == dominant[0]:
+        #     left_dominant = 1
+        #     left_others = 0
+        # else:
+        #     left_dominant = 0
+        #     left_others = 1
+        left_dominant = 0
+        left_others = 0
         
-        for i in range(1, len(nums)):
+        for i in range(len(nums)):
             if nums[i] == dominant[0]:
                 # the current elemnt is dominant of the left
                 left_dominant += 1
@@ -47,7 +49,7 @@ class Solution:
         return -1
 
 soln =  Solution()
-print(soln.minimumIndex([3,3,3,3,7,2]))
+print(soln.minimumIndex([1,3,3,3,3,7]))
 
 
 
