@@ -37,7 +37,7 @@ class Solution:
                 i += 1
             elif j >= right:  # only j exceeding
                 j -= 1   # bring j back
-                i += 1  # go one down 
+                i += 2  # go one down 
             
             if len(output) == cells:
                 break
@@ -63,10 +63,4 @@ class Solution:
         return output
                 
 soln = Solution()
-print(soln.findDiagonalOrder([[2,5],[8,4],[0,-1]]))
-
-
-
-
-
-
+print(soln.findDiagonalOrder([[2]]))
