@@ -1,3 +1,2 @@
 https://codeforces.com/problemset/problem/2070/B
-https://leetcode.com/problems/rotate-image/description/
 https://leetcode.com/problems/spiral-matrix/description/

@@ -8,7 +8,7 @@ class Solution:
         # we will do 4 swaps at once
         # we can complete it on a signle row
         cols = len(matrix[0])
-        n =  cols - 1
+        n =  cols - 1  # b/c of 0 indexing
         
         # will need 2 iterations
         # n//2 times for the outer and n - 1 time for the inner to make 
@@ -18,7 +18,7 @@ class Solution:
             # for the rotation on a single row
             for j in range(cols - 1):
                 # we do 4 swaps here
-                temp = matrix[i][j]
+                temp = matrix[i][i + j]
                 # swap1
                 matrix[i + j][n - i], temp = temp, matrix[i + j][n - i]
                 # swap 2
@@ -27,6 +27,8 @@ class Solution:
                 matrix[n - i - j][i], temp = temp, matrix[n - i - j][i]
                 # swap 4
                 matrix[i][i + j] = temp
+            # col decreases by 2 as it converges
+            cols -= 2
             
 
 
