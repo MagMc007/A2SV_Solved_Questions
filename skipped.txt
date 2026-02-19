@@ -1,1 +1,4 @@
 # https://leetcode.com/problems/largest-number/description/
+# https://leetcode.com/problems/maximum-number-of-coins-you-can-get/description/
+# https://leetcode.com/problems/pancake-sorting/description/
+# https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/description/
