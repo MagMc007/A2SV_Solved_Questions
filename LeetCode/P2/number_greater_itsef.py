@@ -7,4 +7,11 @@ class Solution:
         output = []
 
         for i in nums:
-            output.append(nums-sorted.index(i))
+            output.append(nums_sorted.index(i))
+        
+        return output
+    
+
+"""
+Try optimizing
+"""
