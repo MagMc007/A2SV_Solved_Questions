@@ -1,30 +1,23 @@
 # https://leetcode.com/problems/largest-number/description/
 # 179. Largest Numberclass Solution:
 class Solution:
-    def largestNumber(self, nums: list[int]) -> str:
-        # cast all elements to string
-        nums = list(map(str, nums))
-
-        # compare and sort all elements based on the element[0]
-        # if first element is the same compare with the 
-        # subsequent
-
+    def largestNumber(self, nums: List[int]) -> str:
         n = len(nums)
+
+        # cast them to str and sort 
+        # .sort comapres iterables based on the indices not len
+        nums = list(map(str, nums))
+        nums.sort()
 
         for i in range(n):
             for j in range(n - i - 1):
-                if nums[j] < nums[j+1]:
-                    if (nums[j].startswith(nums[j+1]) or nums[j+1].startswith(nums[j])) and len(nums[j]) != len(nums[j+1]):
-                        con1 = int(nums[j] + nums[j+1])
-                        con2= int(nums[j+1] + nums[j])
-
-                        if con1 > con2:
-                            
-
-                        
-                    else:
-                        nums[j], nums[j+1] = nums[j+1], nums[j]
+                # 3 30 vs 30 3 compare them as strs
+                con1 = nums[j] + nums[j+1]
+                con2 = nums[j+1] + nums[j]
+                
+                if con2 > con1:
+                    nums[j], nums[j+1] = nums[j+1], nums[j]
+        # print(nums)
+        # when it is 0 0 , we just gotta keep one of it
+        nums = str(int("".join(nums)))
         return nums
-
-soln = Solution()
-print(soln.largestNumber(nums =  [3,30,34,5,9]))
