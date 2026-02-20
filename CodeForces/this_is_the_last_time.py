@@ -11,5 +11,10 @@ for _ in range(t):
         casino = list(map(int, input().split()))
         casinos.append(casino)
     
-    sorted_3 = sorted(casinos, key=lambda x: x[2])
-    
+    casinos.sort()
+
+    # look k must be in the bound [l, r)
+    for l, r, real in casinos:
+        if real > k  and l <= k: # real <= r
+            k = real
+    print(k)
