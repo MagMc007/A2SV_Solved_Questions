@@ -12,16 +12,20 @@ comp.sort(reverse=True)
 # sorted based on difference in desc order
 # print(comp)
 times = 0
-for s, c in comp:
+for s in comp:
     if sum_ <= m:
         break
     else:
-        sum_ -= s - c
+        sum_ -= s
         times += 1
 
-
-if times < n:
+# sum may be greater than m
+if sum_ <= m and times != n:
     print(times)
 else:
     print(-1)
 
+"""
+My problem was i did not conside if the compressed files 
+would not even fit in
+"""
