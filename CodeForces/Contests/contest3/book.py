@@ -23,3 +23,9 @@ if flag:
     print("YES")
 else:
     print("NO")
+
+"""
+    i was too attached to one approach
+    change approach next time if it fails
+    twice
+"""

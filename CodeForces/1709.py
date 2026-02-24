@@ -40,10 +40,3 @@ for _ in range(t):
     print(k)
     for op in opn:
         print(*op)
-
-
-            
-
-
-
-        

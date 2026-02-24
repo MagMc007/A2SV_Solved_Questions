@@ -26,3 +26,9 @@ if sum_ > m:
     print(-1)
 else:
     print(times)
+
+"""
+    my mistake was i misunderstanding the case
+    in which all are compressed
+    i thought i he compressed all, it shall not pass
+"""
