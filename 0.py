@@ -1,2 +1,3 @@
-d = {i:i+1 for i in range(3)}
-print(d)
+a = ['1', '2', '4']
+
+print(str(a))
