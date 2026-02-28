@@ -22,7 +22,7 @@ for _ in range(T):
     new_t = "".join(ch * remaining[ch] for ch in sorted(remaining))
 
     # Merge s and remaining string in lexicographical order
-    i ,j = 0, 0
+    i, j = 0, 0
     ans = ""
 
     while i < len(s) and j < len(new_t):
