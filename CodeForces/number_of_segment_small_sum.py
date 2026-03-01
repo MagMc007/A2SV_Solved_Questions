@@ -14,6 +14,6 @@ for right in range(n):
         curr_sum -= arr[left]
         left += 1
 
-    cnt +=  right - left + 1
+    cnt += right - left + 1
     
 print(cnt)
