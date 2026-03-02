@@ -1,0 +1,1 @@
+{"name":"Local: most_social_distance","url":"c:\\A2SV EDCN\\A2SV_Solved_problems\\CodeForces\\most_social_distance.py","tests":[{"id":1772475945120,"input":"2\n3\n3 2 1\n4\n1 3 4 2\n","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\A2SV EDCN\\A2SV_Solved_problems\\CodeForces\\most_social_distance.py","group":"local","local":true}
