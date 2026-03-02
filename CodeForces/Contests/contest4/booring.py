@@ -7,26 +7,19 @@ for _ in range(t):
     left = 0
 
     wins = 0
-    curr = 0
+    window_sum = 0
 
     for right in range(n):
-        if l <= cards[right] <= r:
+        window_sum += cards[right]
+        
+        while window_sum > r:
+            window_sum -= cards[left]
+            left += 1
+        
+        if l <= window_sum <= r:
             wins += 1
-
-            if l <= curr <= r:
-                wins += 1
-        
-            curr = 0
-            left = right
-            continue
-
-        curr += cards[right]
-
-        while 
-        
-
-        
-
+            left = right + 1
+            window_sum = 0
         
     print(wins)
 
