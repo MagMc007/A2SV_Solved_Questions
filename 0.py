@@ -1,3 +1,3 @@
-a = ['1', '2', '4']
+from collections import defaultdict
 
-print(str(a))
+c = defaultdict()

@@ -17,6 +17,7 @@ class Solution:
             
             if rem == 0 and i >= 1:
                 return True
+                
             
             if rem in hash:
                 # it is in the hash so the one in between is div by k
