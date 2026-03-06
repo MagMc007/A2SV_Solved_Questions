@@ -1,2 +1,3 @@
-curr = [suffx_prod[0] * nums[j]]
-            suffx_prod = curr.extend(suffx_prod)
+while nums[left] == 0:
+            #     cnt += 1
+            #     left += 1
