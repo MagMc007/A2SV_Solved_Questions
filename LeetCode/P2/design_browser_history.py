@@ -18,6 +18,10 @@ class BrowserHistory:
         # visiting
         on = Node(url, self.curr, None)
 
+        # cut of the nexts link
+        if self.curr.next:
+            self.curr.next.prev = None
+            
         # update currents next, and move pointer to it
         self.curr.next = on
         self.curr = self.curr.next
