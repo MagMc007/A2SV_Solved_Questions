@@ -9,6 +9,7 @@ class Solution:
         mon_dec = []
 
         for idx, num in enumerate(temperatures):
+            # check the top and compare with current number
             while mon_dec and mon_dec[-1][1] < num:
                 left = mon_dec[-1][0]
                 ans[left] = idx - left
@@ -19,4 +20,5 @@ class Solution:
 
 print(Solution().dailyTemperatures(temperatures = [30,40,50,60]))
 
-
+# time : O(n)
+# space: O(n)
