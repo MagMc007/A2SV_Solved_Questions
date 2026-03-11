@@ -13,13 +13,13 @@ class Solution:
 
         for right in range(len(nums)):
             # make the increasing monotone
-            while mon_dec and mon_inc and mon_inc[-1] < nums[right]:
+            while mon_inc and mon_inc[-1] < nums[right]:
                 mon_inc.pop()
             
             mon_inc.append(nums[right])
 
             # make the decresing monotone
-            while mon_dec[-1] > nums:
+            while mon_dec and mon_dec[-1] > nums[right]:
                 mon_dec.pop()
             
             mon_dec.append(nums[right])
@@ -31,7 +31,8 @@ class Solution:
             if diff > limit:
                 if mon_dec[0] == nums[left]:
                     mon_dec.popleft()
-                else:
+
+                if mon_inc[0] == nums[left]:
                     mon_inc.popleft()
                 
                 left += 1
