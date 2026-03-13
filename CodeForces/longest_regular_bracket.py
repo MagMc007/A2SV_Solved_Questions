@@ -3,29 +3,34 @@
 parenth = input()
 n = len(parenth)
 
-stack = [-1]  # -1 will act as a wall
+stack = []
 
-sub_seq_len = 0
+max_ = 0
 cnt = 0
 
 for i in range(n):
-    if i == "(":
+    if parenth[i] == "(":
         stack.append(i)
     else:
-        stack.pop()
-
-        if not stack:
+        if not stack or parenth[stack[-1]] == ")":
             stack.append(i)
+            continue
+        
+        idx = stack.pop()
+        if stack:
+            sub_leng = i - stack[-1] 
         else:
-            length = i - stack[-1]
+            sub_leng = i + 1
+        
+        if sub_leng == max_:
+            cnt += 1
+        elif sub_leng > max_:
+            cnt = 1
+            max_ = sub_leng
 
-            if length > max_len:
-                max_len = length
-                count = 1
-            elif length == max_len:
-                count += 1
-
-if max_len == 0:
-    print(0, 1)
+if max_ == 0:
+    print("0 1")
 else:
-    print(max_len, count)
+    print(max_, cnt)
+
+

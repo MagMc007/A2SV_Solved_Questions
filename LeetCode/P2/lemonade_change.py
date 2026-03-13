@@ -6,7 +6,7 @@ class Solution:
     def lemonadeChange(self, bills: list[int]) -> bool:
         hash = Counter()  # only 5 and 10
 
-        # bills.sort()
+        # bills.sort() # in queue so no changing
 
         for bill in bills:
             if bill == 5:
