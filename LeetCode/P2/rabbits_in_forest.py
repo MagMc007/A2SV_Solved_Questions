@@ -10,6 +10,9 @@ class Solution:
 
         for k, val in hash.items():
             while val > 0:
+                # n + 1 - will be one color grp
+                # if there are any left in the count, they will be inluded
+                # as a new color group
                 min_cnt += k + 1
                 val -= k + 1
             
