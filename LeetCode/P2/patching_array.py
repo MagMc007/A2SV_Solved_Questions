@@ -8,10 +8,11 @@ class Solution:
         i = 0
 
         while miss <= n:
+            # no gap
             if i < len(nums) and nums[i] <= miss:
                 miss += nums[i]
                 i += 1
-            else:
+            else: # there is a gap
                 miss += miss
                 patches += 1
         return patches
