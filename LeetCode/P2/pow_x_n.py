@@ -16,4 +16,8 @@ class Solution:
         else:
             return x * self.myPow(x, n-1)
 
+
 print(Solution().myPow(2.00000, 3))
+
+# space: O(n)
+# time: O(logn) // halfing by 2
