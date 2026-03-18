@@ -27,6 +27,5 @@ class Solution:
             odds = self.myPow(4, n//2) % MOD
         return (evens * odds) % MOD
         
-
-
+       
 print(Solution().countGoodNumbers(4))
