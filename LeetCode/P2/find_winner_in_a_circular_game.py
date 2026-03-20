@@ -7,7 +7,7 @@ class Solution:
             if n == 0:
                 return 0
             
-            return (get_winner(n-1, k) + k) % k
+            return (get_winner(n-1, k) + k) % n
         
         return get_winner(n, k) + 1
     
