@@ -32,3 +32,18 @@ class Solution:
 
 # time: O(n) => visits every node
 # space: O(n) => would have been heigh but what if we get a LL
+
+"""
+def isSameTree(a, b):
+    if not a and not b:
+        return True
+
+    if not a or not b:
+        return False
+        
+    return (
+        a.val == b.val and
+        isSame(a.left, b.left) and
+        isSame(a.right, b.right)
+    )
+"""
