@@ -26,10 +26,35 @@ class Solution:
 
         def traverse(root):
             if root:
-                get_grand_children(root)
+                if root.val % 2 == 0:
+                    get_grand_children(root)
 
                 traverse(root.left)
                 traverse(root.right)
-                
         traverse(root)
         return sum_
+
+# ===============================================
+# time: O(n) => my function checks only 4 nodes so it is constant time so it won't count
+# space: O(logn) or O(n)(if not balanced)
+
+
+"""
+class Solution:
+    def sumEvenGrandparent(self, root: Optional[TreeNode]) -> int:
+        
+        def dfs(node, parent, grandparent):
+            if not node:
+                return 0
+            
+            # If grandparent is even → include this node
+            add = node.val if grandparent and grandparent.val % 2 == 0 else 0
+            
+            return (
+                add
+                + dfs(node.left, node, parent)
+                + dfs(node.right, node, parent)
+            )
+        
+        return dfs(root, None, None)
+"""
