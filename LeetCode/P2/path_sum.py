@@ -20,9 +20,9 @@ class Solution:
 
                 if sum_ == targetSum:
                     cnt += 1
-                else:
-                    sum_up_children(root.left, sum_)
-                    sum_up_children(root.right, sum_)
+                
+                sum_up_children(root.left, sum_)
+                sum_up_children(root.right, sum_)
      
         def trav(root):
             nonlocal cnt
@@ -36,3 +36,38 @@ class Solution:
                 trav(root.right)
         trav(root)
         return cnt
+    
+# time: O(n^2)
+# space: O(logn)
+
+'''
+reusing the previous sums would reduce the time complexity greatly
+class Solution:
+    def pathSum(self, root: Optional[TreeNode], targetSum: int) -> int:
+        prefix = {0: 1}  # base case
+        cnt = 0
+
+        def dfs(node, curr_sum):
+            nonlocal cnt
+            if not node:
+                return
+
+            curr_sum += node.val
+
+            # check how many times (curr_sum - target) occurred
+            cnt += prefix.get(curr_sum - targetSum, 0)
+
+            # add current sum to hashmap
+            prefix[curr_sum] = prefix.get(curr_sum, 0) + 1
+
+            # traverse
+            dfs(node.left, curr_sum)
+            dfs(node.right, curr_sum)
+
+            # backtrack
+            prefix[curr_sum] -= 1
+
+        dfs(root, 0)
+        return cnt
+
+'''
