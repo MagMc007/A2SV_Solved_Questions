@@ -5,7 +5,7 @@ class Solution:
         child = [0] * k
         unfairness = float('inf')
 
-        def backtrack(idx):
+        def backtrack(idx, max_so_far):
             nonlocal unfairness
             
             if idx == len(cookies):
@@ -13,12 +13,16 @@ class Solution:
                 return 
             
             for i in range(k):
+                # prunned
+                if max_so_far >= unfairness:
+                    return 
                 child[i] += cookies[idx]
-                backtrack(idx + 1)
+                backtrack(idx + 1, max(max_so_far, max(child)))
                 child[i] -= cookies[idx]
 
-        backtrack(0)
+        backtrack(0, 0)
         return unfairness
+
 
 # time: O(k**n) for each child we are giving each cookie and 
 # trying all option exhaustively
