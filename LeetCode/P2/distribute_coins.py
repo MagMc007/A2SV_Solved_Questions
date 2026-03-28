@@ -14,12 +14,19 @@ class Solution:
             if not node:
                 return 0
             
+            # get the right and left balances
             left_balance = traverse(node.left)
             right_balance = traverse(node.right)
             
+            # addition of the balances will be the total move needed
             self.total_moves += abs(left_balance) + abs(right_balance)
             
             return node.val + left_balance + right_balance - 1
 
         traverse(root)
         return self.total_moves
+
+'''
+time: O(n)
+space: O(logn)
+'''
