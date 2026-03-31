@@ -19,7 +19,7 @@ class Solution:
             for i in range(idx, len(num)):
                 # cannot have preceding 0
                 if num[idx] == '0' and i > idx:
-                    break
+                    return False
                 
                 val = int(num[idx:i+1])
                 # pruning
@@ -30,7 +30,7 @@ class Solution:
                         continue
 
                     if val > expected:
-                        break
+                        return False
 
                 prev.append(val)
 
@@ -40,7 +40,7 @@ class Solution:
                 prev.pop()
 
             return False
-            
+           
         return backtrack(0, [])
 
 
