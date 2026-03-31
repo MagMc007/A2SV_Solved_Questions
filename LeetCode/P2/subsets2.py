@@ -1,8 +1,5 @@
 # https://leetcode.com/problems/subsets-ii/description/
 # 90. Subsets II
-from collections import defaultdict
-
-
 class Solution:
     def subsetsWithDup(self, nums: List[int]) -> List[List[int]]:
         nums.sort()
