@@ -36,5 +36,5 @@ class Solution:
         return ans
 
 
-# time:O((nlogn + klogn))
+# time: O(nlogn) + O(mlogm) + (n+m)log(highIndx) == (n+m)log(highIndx)
 # space: O(1)
