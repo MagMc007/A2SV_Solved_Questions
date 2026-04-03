@@ -11,7 +11,7 @@ class Solution:
             middle = (left + right) // 2
 
             if citations[middle] == n - middle:
-                return middle
+                return n - middle
             elif citations[middle] < n - middle: # current citation is less than 
                 left = middle + 1
             else:
