@@ -23,3 +23,5 @@ class Solution:
 
             return node.val + max(left, right)
         
+        dfs(root)
+        return mx
