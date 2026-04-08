@@ -3,7 +3,7 @@
 from collections import Counter
 
 
-class Solution:
+class Solution1:
     def topKFrequent(self, nums: List[int], k: int) -> List[int]:
         nums.sort()
         ctr = Counter(nums)
@@ -20,3 +20,24 @@ class Solution:
                 break
 
         return list(output)
+    
+# bucket sort
+class Solution:
+    def topKFrequent(self, nums: list[int], k: int) -> list[int]:
+        ctr = Counter(nums)
+        bucket = [[] for _ in range(len(nums)+1)]
+
+        for key, v in ctr.items():
+            bucket[v].append(key)
+        
+        ans = []
+
+        for i in range(len(bucket)-1, -1, -1):
+            if not k:
+                break
+
+            for el in bucket[i]:
+                ans.append(el)
+                k -= 1
+        
+        return ans
