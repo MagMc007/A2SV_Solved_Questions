@@ -25,17 +25,4 @@ class Solution:
 
         return max_
 
-
-
-class Solution:
-    def maximumGap(self, nums: list[int]) -> int:
-        nums.sort()
-
-        diff = 0
-
-        for i in range(1, len(nums)):
-            diff = max(diff, nums[i] - nums[i-1])
-        
-        return diff
-
 print(Solution().maximumGap([2,2,2, 1]))
