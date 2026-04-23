@@ -9,7 +9,7 @@ class Solution:
         
         # star movt
         directions = [(0, 1), (0, -1), (1, 0), (-1, 0)]
-                    #   (1, 1), (-1, -1), (1, -1), (-1, 1)]
+                    # (1, 1), (-1, -1), (1, -1), (-1, 1)]
       
         islands = 0
         # turn the visited islands into 0 to mark it is connected 
