@@ -13,14 +13,23 @@ class Solution:
         def dfs(node):
             res = True
             for nei in graph[node]:
-                if colors[nei] == -1: 
+                if colors[nei] == -1:
                     # pain it different from its neighbor
                     colors[nei] = 1 - colors[node]
                     res = res and dfs(nei)
+
                     if not res:
                         return False
                 elif colors[node] == colors[nei]:
                     return False
                 
             return True
-        return dfs(0)
+        res = True
+
+        for i in range(n):
+            if colors[i] == -1:
+                res = res and dfs(i)
+
+                if not res:
+                    return False
+        return True

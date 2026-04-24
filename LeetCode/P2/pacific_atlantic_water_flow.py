@@ -3,9 +3,11 @@
 class Solution:
     def pacificAtlantic(self, heights: List[List[int]]) -> List[List[int]]:
         rows, cols = len(heights), len(heights[0])
-        # with out a doubt 2 can flow in
-        ans = [[0, cols-1], [rows-1, 0]]
-        directions = [(0, 1), (0, -1), (1, 0), (-1, 0)]
+        ans = []
 
-        # i must start from the edges
+        # we will have 2 dxns
+        # up or left
+        pacific = [(0, -1), (-1, 0)]
+        # right or down
+        atlantic = [(0, 1), (1, 0)]
         
