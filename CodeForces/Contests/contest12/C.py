@@ -23,7 +23,8 @@ def qudrant(p1):
             return "2"
         elif y1 < ay:
             return "3"
-        
+
+    
 if qudrant(b) == qudrant(c):
     print("YES")
 else:
