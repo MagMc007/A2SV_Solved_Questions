@@ -10,7 +10,7 @@ class Solution:
             return -1
 
         visited = set()
-        q = deque([((0, 0, 0, 0), 0)]) # the combination and the cnt: state
+        q = deque([((0, 0, 0, 0), 0)])  # the combination and the cnt: state
         
         def toStr(li):
             li = list(map(str, li))
@@ -66,3 +66,11 @@ class Solution:
                     
         # un reachable
         return -1
+    
+
+
+'''
+mostly depends on the q being the dominant
+time: O(8 * 10^4)
+space: O(10^4)
+'''
